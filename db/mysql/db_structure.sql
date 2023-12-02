@@ -261,6 +261,31 @@ CREATE TABLE `browsers` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clientes` (
+  `cliente_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Llave primaria',
+  `entity_id` int(11) NOT NULL COMMENT 'ID de la entidad',
+  `nombre` varchar(128) NOT NULL COMMENT 'Nombre del cliente',
+  `direccion` tinytext NOT NULL COMMENT 'Dirección del cliente',
+  `telefono` varchar(16) NOT NULL COMMENT 'Teléfono del cliente',
+  `fecha_nacimiento` date NOT NULL COMMENT 'Fecha de nacimiento',
+  `creation_user` int(11) NOT NULL,
+  `creation_time` datetime NOT NULL,
+  `edition_user` int(11) NOT NULL,
+  `edition_time` datetime NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`cliente_id`),
+  KEY `cliente_entidad` (`entity_id`),
+  CONSTRAINT `cliente_entidad` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Registro de clientes';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `entities`
 --
 

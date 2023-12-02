@@ -270,6 +270,12 @@ class entitiesModel
 		$this->status = $value === null ? null : (int)$value;
 	}
 
+	public function clientes()
+	{
+		clientesModel::flush();
+		return clientesModel::where("entity_id", $this->entity_id);
+	}
+
 	public function entityMethods()
 	{
 		entityMethodsModel::flush();

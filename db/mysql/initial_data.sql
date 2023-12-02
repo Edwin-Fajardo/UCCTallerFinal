@@ -20,7 +20,7 @@
 
 LOCK TABLES `app_elements` WRITE;
 /*!40000 ALTER TABLE `app_elements` DISABLE KEYS */;
-INSERT INTO `app_elements` VALUES (1,'entityData','Entity data','entity data','M',1,1,'Entity',0,1,0,'entities'),(2,'users','Users','user','M',0,1,'UserDetails',1,1,1,'users'),(3,'preferences','Preferences','preferences','F',1,1,'Preferences',0,1,0,'entity_options'),(4,'roles','Roles','role','M',0,1,'RoleDetails',1,1,1,'roles'),(5,'trash','Trash','trash','F',1,2,'Trash',0,0,0,''),(6,'logs','Activity log','activity log','M',1,2,'',0,0,0,'');
+INSERT INTO `app_elements` VALUES (1,'entityData','Entity data','entity data','M',1,1,'Entity',0,1,0,'entities'),(2,'users','Users','user','M',0,1,'UserDetails',1,1,1,'users'),(3,'preferences','Preferences','preferences','F',1,1,'Preferences',0,1,0,'entity_options'),(4,'roles','Roles','role','M',0,1,'RoleDetails',1,1,1,'roles'),(5,'trash','Trash','trash','F',1,2,'Trash',0,0,0,''),(6,'logs','Activity log','activity log','M',1,2,'',0,0,0,''),(7,'clientes','Clientes','cliente','M',0,3,'DetalleCliente',1,1,1,'clientes');
 /*!40000 ALTER TABLE `app_elements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -30,7 +30,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `app_installers` WRITE;
 /*!40000 ALTER TABLE `app_installers` DISABLE KEYS */;
-INSERT INTO `app_installers` VALUES (1,'admin','$2y$10$9LarkKwQGYEAPBxnrCkB/.YvyCBqEwbasYZK/vPrTjY1NmPWb0qlW','Instalador','(503) 77197466','contacto@edwinfajardo.com','2023-04-04 08:05:24',1);
+INSERT INTO `app_installers` VALUES (1,'admin','$2y$10$WnsEJBPYYEat2dguA9Z.Be3ViFpcN3WVejGdyi/vZRcpEaM2IjIhm','Instalador','(503) 77197466','contacto@edwinfajardo.com','2023-04-04 08:05:24',1);
 /*!40000 ALTER TABLE `app_installers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +50,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `app_methods` WRITE;
 /*!40000 ALTER TABLE `app_methods` DISABLE KEYS */;
-INSERT INTO `app_methods` VALUES (1,1,'Entity','Entity','store_info','Allows you to configure the general information of the business/company',1,1,8,1),(2,1,'Users','Users','manage_users','Allows you to manage users and permissions for each user',3,2,8,1),(3,1,'Preferences','Preferences','preferences','Allows to set and modify optional system parameters in the company',2,3,8,1),(4,1,'About BlackPHP','About','info','Shows system information: Version, contact and technical support',127,NULL,0,1),(5,2,'Trash','Trash','trash','Deleted elements',1,5,8,1),(6,1,'Roles','Roles','roles','Allows to manage roles and permissions for each role',4,4,8,1),(7,2,'Activity log','ActivityLog','activity_log','Activity log on each element for each user',2,6,8,1);
+INSERT INTO `app_methods` VALUES (1,1,'Entity','Entity','store_info','Allows you to configure the general information of the business/company',1,1,8,1),(2,1,'Users','Users','manage_users','Allows you to manage users and permissions for each user',3,2,8,1),(3,1,'Preferences','Preferences','preferences','Allows to set and modify optional system parameters in the company',2,3,8,1),(4,1,'About BlackPHP','About','info','Shows system information: Version, contact and technical support',127,NULL,0,1),(5,2,'Trash','Trash','trash','Deleted elements',1,5,8,1),(6,1,'Roles','Roles','roles','Allows to manage roles and permissions for each role',4,4,8,1),(7,2,'Activity log','ActivityLog','activity_log','Activity log on each element for each user',2,6,8,1),(8,3,'Lista de clientes','ListaClientes','clientes_metodo','',1,7,8,1);
 /*!40000 ALTER TABLE `app_methods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `app_modules` WRITE;
 /*!40000 ALTER TABLE `app_modules` DISABLE KEYS */;
-INSERT INTO `app_modules` VALUES (1,'Settings','Settings','settings','A','Settings',127,1),(2,'Tools','Tools','tools','T','',126,1);
+INSERT INTO `app_modules` VALUES (1,'Settings','Settings','settings','A','Settings',127,1),(2,'Tools','Tools','tools','T','',126,1),(3,'Clientes','Clientes','clientes_modulo','C','1',1,1);
 /*!40000 ALTER TABLE `app_modules` ENABLE KEYS */;
 UNLOCK TABLES;
 
